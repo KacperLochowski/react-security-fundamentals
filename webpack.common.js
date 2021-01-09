@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
   entry: {
@@ -28,10 +29,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html'),
     }),
-    new ESLintPlugin({
-      context: path.resolve(__dirname, './src'),
-      files: '**/*.jsx',
-    }),
+    new ESLintPlugin(),
+    new Dotenv(),
   ],
   resolve: { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
 }

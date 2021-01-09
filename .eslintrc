@@ -29,7 +29,7 @@
       "error",
       {
         "arrays": "always",
-        "objects": "always",
+        "objects": "only-multiline",
         "imports": "never",
         "exports": "never",
         "functions": "never"

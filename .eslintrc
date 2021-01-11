@@ -3,6 +3,11 @@
     "react": {
       "pragma": "React",
       "version": "17.0.1"
+    },
+    "import/resolver": {
+      "webpack": {
+        "config": "./webpack.common.js"
+      }
     }
   },
   "env": {
@@ -10,7 +15,14 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["plugin:react/recommended", "google", "prettier", "prettier/react"],
+  "extends": [
+    "plugin:react/recommended",
+    "google",
+    "prettier",
+    "prettier/react",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -18,7 +30,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier"],
+  "plugins": ["react", "prettier", "import"],
   "rules": {
     "prettier/prettier": "error",
     "arrow-body-style": "off",

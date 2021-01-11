@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import './assets/styles/tailwind.css'
+import './assets/styles/globalStyles.css'
 
 import App from './app'
 
